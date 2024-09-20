@@ -9,11 +9,11 @@ import java.util.Map.Entry;
 
 public class StudentService
 {
-    HashMap<String, Course> courseList = new HashMap<>();
+   private HashMap<String, Course> courseList = new HashMap<>();
 
-    HashMap<String, Student> students = new HashMap<>();
+   private HashMap<String, Student> students = new HashMap<>();
 
-    HashMap<String, List<Course>> coursesEnrolledByStudents = new HashMap<>();
+   private HashMap<String, List<Course>> coursesEnrolledByStudents = new HashMap<>();
 
 
     public StudentService()
@@ -83,7 +83,20 @@ public class StudentService
     public void showAllCourses(){
         //TODO implement using collections loops
     	
-    	
+    
+			for (String key: courseList.keySet()) {
+				
+				
+			System.out.println(courseList.get(key));	
+			}
+				
     	
     }
+
+	public void addStudents(Student student) {
+		// TODO Auto-generated method stub
+		students.put(student.getId(), student);
+	}
+
+	
 }
